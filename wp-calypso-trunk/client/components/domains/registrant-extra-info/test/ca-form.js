@@ -1,0 +1,32 @@
+/**
+ * External dependencies
+ */
+import React from 'react';
+import { shallow } from 'enzyme';
+
+/**
+ * Internal dependencies
+ */
+import { RegistrantExtraInfoCaForm } from '../ca-form';
+
+jest.mock( 'store', () => ( { get: () => {}, set: () => {} } ) );
+
+const mockProps = {
+	translate: ( string ) => string,
+	updateContactDetailsCache: () => {},
+	userWpcomLang: 'EN',
+	getFieldProps: () => ( {} ),
+};
+
+describe( 'ca-form', () => {
+	// eslint-disable-next-line jest/expect-expect
+	test( 'should render without errors when extra is empty', () => {
+		const testProps = {
+			...mockProps,
+			contactDetails: {},
+			ccTldDetails: {},
+		};
+
+		shallow( <RegistrantExtraInfoCaForm { ...testProps } /> );
+	} );
+} );

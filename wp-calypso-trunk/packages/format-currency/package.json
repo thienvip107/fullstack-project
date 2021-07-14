@@ -1,0 +1,40 @@
+{
+	"name": "@automattic/format-currency",
+	"version": "1.0.0-alpha.0",
+	"description": "JavaScript library for formatting currency",
+	"main": "dist/cjs/index.js",
+	"module": "dist/esm/index.js",
+	"calypso:src": "src/index.js",
+	"sideEffects": false,
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/Automattic/wp-calypso.git",
+		"directory": "packages/format-currency"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"keywords": [
+		"currency",
+		"internationalization"
+	],
+	"author": "Automattic Inc.",
+	"license": "GPL-2.0-or-later",
+	"bugs": {
+		"url": "https://github.com/Automattic/wp-calypso/issues"
+	},
+	"homepage": "https://github.com/Automattic/wp-calypso",
+	"dependencies": {
+		"@babel/runtime": "^7.14.0",
+		"i18n-calypso": "^5.0.0"
+	},
+	"scripts": {
+		"clean": "npx rimraf dist",
+		"build": "transpile",
+		"prepack": "yarn run clean && yarn run build"
+	},
+	"peerDependencies": {
+		"react": "^16.8"
+	},
+	"types": "types"
+}

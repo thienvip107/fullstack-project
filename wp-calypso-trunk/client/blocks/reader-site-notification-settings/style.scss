@@ -1,0 +1,80 @@
+.reader-site-notification-settings__button {
+	color: var( --color-text-subtle );
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.reader-site-notification-settings__button-label {
+	font-size: $font-body-small;
+
+	@include breakpoint-deprecated( '<660px' ) {
+		display: none;
+	}
+}
+
+.reader-site-notification-settings .gridicons-cog {
+	fill: var( --color-neutral-20 );
+	height: 18px;
+	position: relative;
+		top: 4px;
+		left: -4px;
+
+	@include breakpoint-deprecated( '<660px' ) {
+		left: -1px;
+	}
+}
+
+.reader-popover__wrapper {
+	.segmented-control {
+		background: inherit;
+		padding: 0 12px 17px 16px;
+	}
+
+	.segmented-control__link {
+		background: var( --color-surface );
+	}
+
+	.form-label {
+		display: inline-block;
+		font-weight: 400;
+		position: relative;
+		top: 1px;
+	}
+
+	.reader-site-notification-settings__popout-toggle:nth-child( 2 ),
+	.reader-site-notification-settings__popout-toggle:nth-child( 3 ),
+	.reader-site-notification-settings__popout-toggle:nth-child( 4 ) {
+		display: flex;
+	}
+}
+
+.reader-site-notification-settings__popout-toggle,
+.reader-site-notification-settings__popout-instructions {
+	border-top: 1px solid var( --color-neutral-10 );
+	color:var( --color-neutral-70 );
+	font-size: $font-body-small;
+	padding: 10px 15px;
+	text-align: left;
+
+	&:first-child {
+		border-top: 0;
+	}
+}
+
+.reader-site-notification-settings__popout-hint,
+.reader-site-notification-settings__popout-instructions-hint {
+	color: var( --color-text-subtle );
+	font-size: $font-body-extra-small;
+	margin-bottom: 0;
+}
+
+.reader-site-notification-settings__popout-hint {
+	width: 220px;
+}
+
+.reader-site-notification-settings__popout-instructions-hint {
+	margin-top: 4px;
+	width: 250px;
+}

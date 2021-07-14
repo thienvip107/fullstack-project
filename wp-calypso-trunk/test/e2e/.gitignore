@@ -1,0 +1,15 @@
+.envrc
+
+/image-uploads/
+/image-uploads-store/
+/screenshots/
+/screenshots-i18n/
+/temp/
+/temp-cookies/
+*.log
+
+# config overrides
+/config/local-*
+
+# typescript output
+dist/

@@ -1,0 +1,68 @@
+{
+	"extends": [ "config:base", "default:pinDigestsDisabled" ],
+	"packageRules": [
+		{
+			"extends": "monorepo:wordpress",
+			"separateMajorMinor": false,
+			"prPriority": 2
+		},
+		{
+			"extends": "monorepo:babel",
+			"prPriority": 1
+		},
+		{
+			"extends": "monorepo:lodash",
+			"prPriority": 1
+		},
+		{
+			"extends": "monorepo:react",
+			"prPriority": 1
+		},
+		{
+			"packagePatterns": [ "^redux$", "^react-redux$" ],
+			"prPriority": 1
+		},
+		{
+			"packageName": "typescript",
+			"prPriority": 1
+		},
+		{
+			"groupName": "Type definitions",
+			"packagePatterns": [ "^@types/" ],
+			"prPriority": 1
+		},
+		{
+			"packagePatterns": [ "^webpack" ],
+			"prPriority": 1
+		},
+		{
+			"packageName": "tinymce",
+			"allowedVersions": "^4"
+		},
+		{
+			"extends": "monorepo:storybook",
+			"prPriority": 1
+		},
+		{
+			"groupName": "eslint packages",
+			"matchPackagePatterns": [ "^eslint" ],
+			"prPriority": 1
+		}
+	],
+	"statusCheckVerify": true,
+	"rangeStrategy": "bump",
+	"ignoreDeps": [ "jquery" ],
+	"labels": [ "Framework", "[Type] Task" ],
+	"lockFileMaintenance": {
+		"enabled": true,
+		"schedule": "every weekday"
+	},
+	"postUpdateOptions": [ "yarnDedupeHighest" ],
+	"prConcurrentLimit": 10,
+	"prHourlyLimit": 6,
+	"semanticCommits": true,
+	"semanticCommitType": "chore",
+	"masterIssue": true,
+	"masterIssueTitle": "Renovate Dependency Updates",
+	"reviewers": [ "team:@Automattic/team-calypso-platform" ]
+}

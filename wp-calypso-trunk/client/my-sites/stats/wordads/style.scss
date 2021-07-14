@@ -1,0 +1,5 @@
+@include breakpoint-deprecated( '>480px' ) {
+	.wordads .stats-tabs .stats-tab {
+		width: 33.33%;
+	}
+}
